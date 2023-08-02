@@ -1,0 +1,139 @@
+html {
+    font-size: 62.5%
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100vh;
+    grid-template-areas: "left center right";
+}
+
+.left {
+    background-color: #C5DFF8;
+    border: 5px solid white;
+}
+
+.center {
+    background-color: #A0BFE0;
+    border: 5px solid white;
+}
+
+.right {
+    background-color: #C5DFF8;;
+    border: 5px solid white;
+}
+
+.left,.center,.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    overflow: auto;
+}
+
+h2{
+    margin-bottom: 2vw;
+}
+
+p{
+    margin: 10px 0;
+}
+
+img{
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    margin: 0;
+    position: relative;
+    top:7px;
+    border-radius: 5px;
+}
+
+.datos p a{
+    text-decoration: none;
+    color: #068FFF;
+}
+
+/*Bonus: lo utilizo para resaltar el texto*/
+.datos p a:hover{
+    color: #4E4FEB;
+}
+
+
+.img img{
+    border-radius: 100vw;
+    margin-bottom: 1vw;
+    width: 15vw;
+    height: 15vw;
+}
+
+.center-c{
+    margin: auto;
+}
+
+.datos, .perfil, .skill, .proyectos, .logros, .idiomas, .estudios, .experiencia{
+    margin: 1vw 2vw;
+    font-size: 1vw;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 100vw;
+        grid-template-areas: 
+        "left"
+        "center"
+        "right";
+    }
+
+    .img img{
+        border-radius: 50%;
+        margin-bottom: 1vw;
+        width: 50vw;
+        height: 50vw;
+    }
+
+    img{
+        width: 30px;
+        height: 30px;
+        padding: 2px;
+        margin: 0;
+        position: relative;
+        top:7px;
+        border-radius: 5px;
+    }
+
+    .left, .center, .right{
+        overflow:hidden;
+    }
+
+    .center .center-c .skill h2{
+        font-size: 6vw
+    }
+
+    p{
+        font-size: 4vw
+    }
+
+    h2{
+        margin: 20px 0px;
+    }
+    
+    .datos,.perfil,.proyectos,.skills,.logros,.idiomas,.estudios,.experiencia {
+        margin: 4vw 2vw;
+        font-size: 4vw;
+    }
+}
